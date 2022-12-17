@@ -57,7 +57,8 @@ jobs:
 
     env:
       Solution_Name: AppWithSqlite.sln                         # Replace with your solution name, i.e. MyWpfApp.sln.
-      Test_Project_Path: AppWithSqlite\AppWithSqlite.csproj                # Replace with the path to your test project, i.e. MyWpfApp.Tests\MyWpfApp.Tests.csproj.
+      Test_Project_Path: AppWithSqlite\AppWithSqlite.csproj 
+      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}                    # Replace with the path to your test project, i.e. MyWpfApp.Tests\MyWpfApp.Tests.csproj.
       
     steps:
     - name: Checkout
@@ -101,17 +102,6 @@ jobs:
         path: D:\a\AppWithSqlite\AppWithSqlite\AppWithSqlite\bin\Debug\net6.0-windows\publish\
           
           
-    - uses: actions/create-release@v1
-      id: create_release
-      env:
-            GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      with:
-           tag_name: ${{ github.ref }}
-           release_name: ${{ github.ref }}
-
-    - uses: csexton/release-asset-action@v2
-      with:
-          github-token: ${{ secrets.GITHUB_TOKEN }}
-      
+ 
       
 
