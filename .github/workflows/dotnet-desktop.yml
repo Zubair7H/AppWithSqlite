@@ -89,7 +89,7 @@ jobs:
     - name: Publish
       run: dotnet publish
       
-    - name: Upload WebApp1 Build Artifact
+    - name: Upload AppWithSqlite Build Artifact
       uses: actions/upload-artifact@v2
       with:
         name: AppWithSqlite
