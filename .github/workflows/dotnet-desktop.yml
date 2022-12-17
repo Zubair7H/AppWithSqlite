@@ -89,5 +89,11 @@ jobs:
     - name: Publish
       run: dotnet publish
       
+    - name: Upload WebApp1 Build Artifact
+      uses: actions/upload-artifact@v2
+      with:
+        name: AppWithSqlite
+        path: /Users/alame/source/repos/AppWithSqlite/AppWithSqlite/bin/Release/net6.0-windows/win-x64/publish/AppWithSqlite.exe
+      
       
 
