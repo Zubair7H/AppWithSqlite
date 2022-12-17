@@ -8,9 +8,9 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v1
+    - uses: actions/checkout@v3
     - name: Setup .NET Core
-      uses: actions/setup-dotnet@v1
+      uses: actions/setup-dotnet@v3
       with:
         dotnet-version: 3.1.100
     - name: Build for Linux
@@ -28,7 +28,7 @@ jobs:
         name: Ghoplin.exe
         path: AppWithSqlite/bin/ReleaseComplete/netcoreapp3.1/win-x64/publish/AppWithSqlite.exe
     - name: Make Release
-      uses: softprops/action-gh-release@v1
+      uses: softprops/action-gh-release@v3
       if: startsWith(github.ref, 'refs/tags/')
       with:
         files: |
