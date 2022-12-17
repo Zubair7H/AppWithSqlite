@@ -37,3 +37,7 @@ jobs:
           github-token: ${{ secrets.GITHUB_TOKEN }}
           pattern: AppWithSqlite/bin/Release/net6.0-windows/publish/*.exe
           release-url: ${{ steps.create_release.outputs.upload_url }}
+          
+      
+      - name: Publish
+        run: dotnet publish
