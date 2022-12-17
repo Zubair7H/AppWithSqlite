@@ -9,9 +9,9 @@ namespace AppWithSqlite.Repos
 {
     public interface ISellersRepository
     {
-        IEnumerable<AvgSallary> GetSellers();
-        bool Insert(AvgSallary avgSallary);
-        bool Update(AvgSallary avgSallary);
+        IEnumerable<Sellers> GetSellers();
+        bool Insert(Sellers sellers);
+        bool Update(Sellers sellers);
         bool Delete(string ID);
 
     }

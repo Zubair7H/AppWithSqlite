@@ -17,21 +17,21 @@ namespace AppWithSqlite.Repos
             throw new NotImplementedException();
         }
 
-        public IEnumerable<AvgSallary> GetSellers()
+        public IEnumerable<Sellers> GetSellers()
         {
             using IDbConnection db= new SqliteConnection(AppCon.ConnectionString);
             if (db.State == ConnectionState.Closed)
                 db.Open();
-            return db.Query<AvgSallary>("SELECT     ID  ,     Name,     Sallary FROM    Seller WHERE    Sallary> (SELECT             AVG(Sallary)       FROM           seller           where ID=ID);", commandType: CommandType.Text);
+            return db.Query<Sellers>("SELECT     ID  ,     Name,     Sallary FROM    Seller WHERE    Sallary> (SELECT             AVG(Sallary)       FROM           seller           where ID=ID);", commandType: CommandType.Text);
 
         }
 
-        public bool Insert(AvgSallary avgSallary)
+        public bool Insert(Sellers sellers)
         {
             throw new NotImplementedException();
         }
 
-        public bool Update(AvgSallary avgSallary)
+        public bool Update(Sellers sellers)
         {
             throw new NotImplementedException();
         }

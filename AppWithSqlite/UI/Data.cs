@@ -26,7 +26,7 @@ namespace AppWithSqlite
 
         private void Data_Load(object sender, EventArgs e)
         {
-            dataGridView1.AutoGenerateColumns = false;
+          
             sellersRepository =new sellerRepo();
             dataGridView1.DataSource= sellersRepository.GetSellers();
             lblTotalRecords.Text = $"Total records:{dataGridView1.RowCount}";
