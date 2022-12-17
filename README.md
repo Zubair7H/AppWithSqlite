@@ -1,3 +1,3 @@
 # AppWithSqlite
-#Download the AppsWithSqlite
+#Download the AppsWithSqlite.exe
 https://github.com/Zubair7H/AppWithSqlite/releases
